@@ -107,7 +107,7 @@ public class Recursion {
         //TODO:
         else
         {
-        	
+        	return (int) (Math.pow(branchingFactor, height - 1) + nnaryTreeSize(branchingFactor, height - 1));
         }
       
     }

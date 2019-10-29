@@ -41,5 +41,16 @@ public class RecursionTest {
 		
 		assertEquals(expected, actual, 0.001);
 	}
+	
+	@Test
+	public void testNnaryTree(){
+		Recursion ntree = new Recursion();
+		int branchingFactor = 5;
+		int height = 4;
+		int expected = 156;
+		int actual = ntree.nnaryTreeSize(branchingFactor, height);
+		
+		assertEquals(expected, actual);
+	}
 }
 
