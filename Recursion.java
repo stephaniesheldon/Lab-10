@@ -160,8 +160,13 @@ public class Recursion {
          */
         double area = 0;
         
-        
-        
+        if(square){
+        	area = Math.pow(length,2);
+        }
+        else{
+        	area = Math.PI * Math.pow(length, 2);
+        }
+
         /*
          * Simply return the area on the base case:
          */
@@ -177,7 +182,13 @@ public class Recursion {
          * circle will be <length> / 2.
          */
         
+         if(square){
+        	 return area + circledSquared(false,length/2,depth - 1);
+         }
         
+         else{
+        	 return area + circledSquared(true, Math.sqrt(2) * length, depth - 1);
+         }
         
         
         //TODO: Complete the requirements from the block of comments above.

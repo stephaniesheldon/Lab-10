@@ -22,5 +22,24 @@ public class RecursionTest {
 		
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void testcircledSquared(){
+		Recursion area = new Recursion();
+		double squareLength = 2;
+		int depth = 3;
+		
+		double expected = 9.141;
+		double actual = area.circledSquared(true, squareLength, depth);
+		
+		assertEquals(expected, actual,0.001);
+		
+		double radius = 4;
+		
+		expected = 107.398;
+		actual = area.circledSquared(false, radius, depth);
+		
+		assertEquals(expected, actual, 0.001);
+	}
 }
 
